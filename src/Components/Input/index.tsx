@@ -1,4 +1,3 @@
-import React from 'react'
 import { Controller, } from "react-hook-form"
 
 import {
@@ -8,8 +7,9 @@ import {
     ErrorText
   } 
 from './styles'
+import { IInput } from './types'
 
-const Input = ({leftIcon, name,control, errorMessage, ...rest}) => {
+const Input = ({leftIcon, name,control, errorMessage, ...rest}: IInput) => {
   return (
     <>
     <InputContainer>
@@ -17,12 +17,12 @@ const Input = ({leftIcon, name,control, errorMessage, ...rest}) => {
     <Controller
       name={name}
       control={control}
-      render={({ field }) =>  <InputText {...field} {...rest} />}
+      rules={{required: true}}
+      render={({ field:{value,onChange} }) =>  <InputText value={value} onChange={onChange} {...rest} />}
       />
-   
     </InputContainer>
-    {errorMessage ? <ErrorText>{errorMessage}</ErrorText> : null}
-      </>
+      {errorMessage ? <ErrorText>{errorMessage}</ErrorText> : null}
+    </>
   )
 }
 export  {Input}

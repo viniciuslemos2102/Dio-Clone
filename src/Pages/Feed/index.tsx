@@ -1,4 +1,3 @@
-import React from 'react'
 import { Card } from '../../Components/Card';
 import { UserInfo } from '../../Components/UserInfo';
 

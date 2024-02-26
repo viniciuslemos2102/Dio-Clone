@@ -70,3 +70,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 https://github.com/digitalinnovationone/trilha-react-desafio-3/blob/master/src/components/Button/styles.js
+https://www.figma.com/file/fvjQQNtqaUdpuNixvCZVav/DIO-CLONE?type=design&node-id=0-1&mode=design&t=o0ce2oPquGDsXixk-0

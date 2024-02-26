@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../../Assets/logo-dio.png'
 import {
     BuscarInputContainer,
@@ -10,11 +9,12 @@ import {
     Wrapper
 } from './styles'
 
-import { Button } from '../Button';
+import { Button } from '../Button/index';
 import { UserPicture } from '../Card/styles';
+import { IHeader } from './types';
 
 
-const Header = ({autenticado}) => {
+const Header = ({autenticado}: IHeader) => {
   return (
     <Wrapper>
         <HeaderContainer>
