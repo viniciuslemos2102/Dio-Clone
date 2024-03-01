@@ -11,16 +11,21 @@ import {
 
 import { Button } from '../Button/index';
 import { UserPicture } from '../Card/styles';
-import { IHeader } from './types';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
 
 
-const Header = ({autenticado}: IHeader) => {
+
+const Header = () => {
+  const {user} = useAuth();
   return (
     <Wrapper>
         <HeaderContainer>
             <Row>
+              <Link to={'/'}>
                 <img src={Logo} alt='Logo' />
-                {autenticado ? (
+              </Link>
+                {user.id ? (
                 <>
                     <BuscarInputContainer>
                         <Input placeholder='Buscar...'/>
@@ -32,12 +37,12 @@ const Header = ({autenticado}: IHeader) => {
                 ) : null}
             </Row>
             <Row>
-            {autenticado ? (
+            {user.id ? (
                 <UserPicture src="https://avatars.githubusercontent.com/u/45412450?v=4"/>
               ) : (
               <>
                 <MenuRigth href="/">Home</MenuRigth>
-                <Button title="Entrar" />
+                <Link to={'/login'} ><Button title="Entrar" /></Link>
                 <Button title="Cadastrar" />
               </>)}
             </Row>
